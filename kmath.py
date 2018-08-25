@@ -26,3 +26,14 @@ def getDgts(n):
         Dgts.insert(0, n % 10)
         n /= 10
     return Dgts
+
+def isArmstrong(n):
+    dgts = getDgts(n)
+    power = len(dgts)
+    total = 0
+    for d in dgts:
+        total += d ** power
+    if total == n:
+        return True
+    else:
+        return False
